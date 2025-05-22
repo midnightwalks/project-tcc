@@ -1,0 +1,45 @@
+### Register User (POST /register)
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "123",
+  "confirm_password": "123"
+}
+
+### Login User (POST /login)
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "username": "123",
+  "password": "123"
+}
+
+### Create DaftarKonser (POST /daftarkonser) - butuh token
+POST http://localhost:5000/daftarkonser
+Content-Type: application/json
+Authorization: Bearer <your_access_token>
+
+{
+  "nama_konser": "Konser Musik",
+  "harga_tiket": 150000,
+  "tanggal": "2025-06-15",
+  "tempat": "Stadion ABC",
+  "waktu": "19:00",
+  "deskripsi": "Konser musik dengan artis terkenal",
+  "gambar": "http://example.com/image.jpg"
+}
+
+### Create Merchandise (POST /merchandise) - butuh token
+POST http://localhost:5000/merchandise
+Content-Type: application/json
+Authorization: Bearer <your_access_token>
+
+{
+  "nama_barang": "Kaos Band",
+  "harga_barang": 120000,
+  "deskripsi": "Kaos resmi konser",
+  "gambar": "http://example.com/kaos.jpg"
+}
