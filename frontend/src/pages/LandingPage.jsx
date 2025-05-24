@@ -23,10 +23,15 @@ const LandingPage = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       {/* Konten utama */}
-      <div className="relative z-10 text-white px-6">
-        <h1 className="text-5xl font-bold mb-6 drop-shadow-lg">Welcome</h1>
-        <p className="text-lg mb-10 drop-shadow-md max-w-xl mx-auto">
-          Selamat datang di aplikasi kami! Temukan kemudahan dan kenyamanan di sini.
+      <div className="relative z-10 text-white px-6 flex flex-col items-center">
+        {/* Logo */}
+        <img
+          src="/logo.png"
+          alt="Logo"
+          className="w-150 drop-shadow-md"
+        />
+        <p className="text-lg mb-3 drop-shadow-md max-w-xl mx-auto">
+          Selamat datang di aplikasi kami! 
         </p>
         <button
           onClick={handleGetStarted}

@@ -33,12 +33,17 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center"
+    <div className="min-h-screen flex flex-col items-center justify-center"
           style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}>
+      <img
+        src="/logo.png"
+        alt="Logo"
+        className="w-70 mb-3  drop-shadow-md"
+      />
       <div className="bg-white p-8 rounded-xl shadow-xl w-96 border border-purple-300">
         <h2 className="text-3xl font-extrabold text-center mb-6 text-black-600">Register</h2>
         <form onSubmit={handleRegister} className="space-y-6">

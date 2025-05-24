@@ -29,23 +29,33 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center"
+    <div
+      className="min-h-screen flex flex-col items-center justify-center"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}>
-        <div className="bg-white p-8 rounded-xl shadow-xl w-96 border border-#3D365C-300">
-        <h2 className="text-3xl font-extrabold text-center mb-6 text-#3D365C-600">Login</h2>
+      }}
+    >
+      {/* Logo di atas */}
+      <img
+        src="/logo.png"
+        alt="Logo"
+        className="w-70 mb-3  drop-shadow-md"
+      />
+
+      {/* Container Form Login */}
+      <div className="bg-white p-8 rounded-xl shadow-xl w-96 border border-purple-300">
+        <h2 className="text-3xl font-extrabold text-center mb-6 text-black">Login</h2>
         <form onSubmit={handleLogin} className="space-y-6">
           <div>
-            <label htmlFor="username" className="block text-sm font-medium text-#3D365C-700">
+            <label htmlFor="username" className="block text-sm font-medium text-black-700">
               Username
             </label>
             <input
               type="text"
               id="username"
-              className="w-full mt-2 p-3 border border-#3D365C-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-#3D365C-400"
+              className="w-full mt-2 p-3 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
@@ -53,13 +63,13 @@ const LoginPage = () => {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-#3D365C-700">
+            <label htmlFor="password" className="block text-sm font-medium text-black-700">
               Password
             </label>
             <input
               type="password"
               id="password"
-              className="w-full mt-2 p-3 border border-#3D365C-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-#3D365C-400"
+              className="w-full mt-2 p-3 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -74,9 +84,14 @@ const LoginPage = () => {
           </button>
         </form>
         {error && <p className="mt-3 text-center text-red-500">{error}</p>}
-        <p className="mt-6 text-center text-sm text-#3D365C-700">
-          <Link to="/register" className="text-#3D365C-600 font-semibold hover:underline">
+        <p className="mt-6 text-center text-sm text-black">
+          <Link to="/register" className="text-black-600 font-semibold hover:underline">
             Register
+          </Link>
+        </p>
+        <p className="mt-4 text-center">
+          <Link to="/" className="text-sm text-gray-600 hover:underline">
+            ← Kembali ke Beranda
           </Link>
         </p>
       </div>

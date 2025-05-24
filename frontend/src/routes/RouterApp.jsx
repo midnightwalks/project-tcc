@@ -5,6 +5,7 @@ import RegisterPage from "../pages/RegisterPage";
 import Dashboard from "../pages/Dashboard";
 import DaftarKonser from "../pages/DaftarKonser";
 import Merchandise from "../pages/Merchandise";
+import Documentation from "../pages/Documentation";
 import ProtectedRoute from "../pages/ProtectedRoute";
 
 function RouterApp() {
@@ -38,6 +39,14 @@ function RouterApp() {
           element={
             <ProtectedRoute>
               <Merchandise />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/documentation"
+          element={
+            <ProtectedRoute>
+              <Documentation />
             </ProtectedRoute>
           }
         />

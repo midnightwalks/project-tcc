@@ -128,10 +128,10 @@ function DaftarMerchandiseApp() {
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-4xl font-bold text-purple-700">Daftar Merchandise</h1>
         <button
-          onClick={handleLogout}
-          className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow"
+          onClick={() => navigate("/dashboard")}
+          className="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg shadow"
         >
-          🔓 Logout
+        Back
         </button>
       </div>
 
@@ -140,12 +140,6 @@ function DaftarMerchandiseApp() {
         <div className="flex-1 bg-white rounded-lg shadow p-4 overflow-auto max-h-[70vh]">
           <div className="flex justify-between items-center mb-4 border-b border-purple-200 pb-2">
             <h2 className="font-semibold text-lg text-purple-900">List Merchandise</h2>
-            <button
-              onClick={handleRefresh}
-              className="bg-purple-500 hover:bg-purple-600 text-white px-3 py-1 rounded flex items-center gap-2"
-            >
-              🔄 Refresh
-            </button>
           </div>
 
           {merchList.length > 0 ? (
@@ -239,7 +233,7 @@ function DaftarMerchandiseApp() {
                         </button>
                         <button
                           onClick={() => deleteMerch(merch.id)}
-                          className="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded"
+                          className="flex-1 bg-purple-500 hover:bg-purple-600 text-white py-2 rounded"
                         >
                           🗑️ Hapus
                         </button>
